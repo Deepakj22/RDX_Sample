@@ -1,5 +1,7 @@
 
+import MouseTracker1 from "./components/MouseTracker1"
 import UserPostList from "./services/UserPostList"
+import Wrapper from "./Wrapper"
 
 const App = () => {
   return (
@@ -18,6 +20,17 @@ const App = () => {
   )}
 /> */}
 <UserPostList/>
+<h3 style ={{fontFamily:"Arial, sans-serif", 
+  textAlign:"left"}}>Mouse Position Trackers</h3>
+
+{/* <MouseTracker1 
+render={({x,y})=>
+  <p>Mouse Position → X: {x}, Y: {y}</p>}/> */}
+<MouseTracker1 >{
+  (position)=>(<h3>Mouse possition : X : {position.x}, Y : {position.y}</h3>)}</MouseTracker1>
+<Wrapper 
+render={(name :any)=><h1>Hello, {name}
+</h1>}></Wrapper>
        {/* <MouseTracker
         render={({ x, y }) => (
           <p>

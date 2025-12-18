@@ -1,0 +1,89 @@
+.container {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    width: 90%;
+    max-width: 1000px;
+    margin: 40px auto;
+}
+
+.header-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+/* Table Styling */
+.employee-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    /* Ensures corners are rounded */
+}
+
+.employee-table thead {
+    background-color: #2c3e50;
+    color: #ffffff;
+    text-align: left;
+}
+
+.employee-table th,
+.employee-table td {
+    padding: 12px 15px;
+}
+
+.employee-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+    transition: background-color 0.2s;
+}
+
+.employee-table tbody tr:nth-of-type(even) {
+    background-color: #f8f9fa;
+}
+
+.employee-table tbody tr:hover {
+    background-color: #f1f4f9;
+}
+
+.emp-name {
+    font-weight: 600;
+    color: #333;
+}
+
+/* Button Styling */
+button {
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 12px;
+    font-size: 14px;
+    transition: opacity 0.2s;
+}
+
+.btn-add {
+    background-color: #27ae60;
+    color: white;
+    font-weight: bold;
+}
+
+.actions-cell {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+}
+
+.btn-edit {
+    background-color: #3498db;
+    color: white;
+}
+
+.btn-delete {
+    background-color: #e74c3c;
+    color: white;
+}
+
+button:hover {
+    opacity: 0.8;
+}
