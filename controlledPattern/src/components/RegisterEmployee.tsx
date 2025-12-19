@@ -3,6 +3,7 @@ import type { Employee } from '../entity/Employee'
 import EmployeeForm from './EmployeeForm';
 import { useNavigate, useParams } from 'react-router-dom';
 import apiClient from '../api/apiClient';
+import { getEmployeeById } from '../services/getEmployeeById';
 
 interface RegisterEmployeeProps {
     onFinalSubmit?: (employee: Employee,mode:"add"|"edit") => void;
@@ -20,15 +21,15 @@ const RegisterEmployee: React.FC<RegisterEmployeeProps> = ({ onFinalSubmit }) =>
   const [employee, setEmployee] = useState<Employee>(initialState);
 
   useEffect(() => {
- if (!id) {
+   if (!id) {
     setEmployee(initialState)
     return
   }
 
   const fetchEmployee = async () => {
     try {
-      const res = await apiClient.get<Employee>(`/employee/${id}`)
-      setEmployee(res.data)
+      const res = await getEmployeeById(Number(id));
+      setEmployee(res)
     } catch (err) {
       console.error(err)
     }
