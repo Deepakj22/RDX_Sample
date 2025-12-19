@@ -63,7 +63,7 @@ button {
 }
 
 .btn-add {
-    background-color: #27ae60;
+    background-color: #087a37;
     color: white;
     font-weight: bold;
 }
@@ -75,12 +75,12 @@ button {
 }
 
 .btn-edit {
-    background-color: #3498db;
+    background-color: #535b61;
     color: white;
 }
 
 .btn-delete {
-    background-color: #e74c3c;
+    background-color: #dd2814;
     color: white;
 }
 
