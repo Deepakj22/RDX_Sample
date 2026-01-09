@@ -13,30 +13,55 @@ const EmployeeForm :React.FC<EmployeeFormProps> = ({employee, onSubmit, onChange
   return (
     <>
   <div className="form-wrapper">
-    <div className="form-card">
-      <h1 className="form-title">{isEdit ? "Edit Employee" : "Register Employee"}</h1>
-      <div className="form-container">
-        <div className="input-group">
-          <label>Employee Name</label>
-          <input type="text" name="name" placeholder="Enter name" value={employee.name} onChange={onChange} />
+            <div className="form-card">
+                <div className="form-header">
+                    <h1 className="form-title">{isEdit ? "Edit Employee" : "Register Employee"}</h1>
+                    <p className="form-subtitle">Please fill in the details below</p>
+                </div>
+
+                <div className="form-body">
+                    <div className="input-group">
+                        <label htmlFor="name">Full Name</label>
+                        <input 
+                            id="name"
+                            type="text" 
+                            name="name" 
+                            placeholder="e.g. John Doe" 
+                            value={employee.name} 
+                            onChange={onChange} 
+                        />
+                    </div>
+
+                    <div className="input-group">
+                        <label htmlFor="email">Email Address</label>
+                        <input 
+                            id="email"
+                            type="email" 
+                            name="email" 
+                            placeholder="john@example.com" 
+                            value={employee.email} 
+                            onChange={onChange} 
+                        />
+                    </div>
+
+                    <div className="input-group">
+                        <label htmlFor="city">City</label>
+                        <input 
+                            id="city"
+                            type="text" 
+                            name="city" 
+                            placeholder="e.g. New York" 
+                            value={employee.city} 
+                            onChange={onChange} 
+                        />
+                    </div>
+
+                    <button type="button" className="submit-btn" onClick={onSubmit}>
+                        {isEdit ? 'Update Details' : 'Register '}
+                    </button>
+                </div>
+            </div>
         </div>
-        
-        <div className="input-group">
-          <label>Employee Email</label>
-          <input type="email" name="email" placeholder="Enter email" value={employee.email} onChange={onChange} />
-        </div>
-        
-        <div className="input-group">
-          <label>Employee City</label>
-          <input type="text" name="city" placeholder="Enter city" value={employee.city} onChange={onChange} />
-        </div>
-        
-        <button type="button" className="submit-btn" onClick={onSubmit}>
-          {isEdit ? 'Update ' : 'Register '}
-        </button>
-      </div>
-    </div>
-  </div>
 </>
   )
 }

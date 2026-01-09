@@ -12,7 +12,7 @@ const EmployeeTable: React.FC<EmployeeTableProps> = ({employees,onDelete,navigat
   return (
     <div className="container">
       <div className="header-section">
-        <h1>Employee List</h1>
+        <h1 style={{fontSize :"40px", fontWeight:"normal"}}>Employee List</h1>
         <button className="btn-add" onClick={() => navigate('/add-employee')}>
           + Add Employee
         </button>

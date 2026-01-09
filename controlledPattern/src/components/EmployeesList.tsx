@@ -12,7 +12,7 @@ const EmployeesList : React.FC = () => {
    const [isLoading,setIsLoading] = useState<boolean>(true);
    const [error,setError] = useState<string | null>(null);
    const navigate = useNavigate();
-
+   //const EmployeeTableWithLoading = withLoading(EmployeeTable);
    useEffect(()=>{
    const fetchEmployees = async()=>{
     try{

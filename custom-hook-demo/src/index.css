@@ -1,0 +1,17 @@
+.spinner-container {
+  display: flex;
+  justify-content: center;
+  /* Horizontal center */
+  align-items: center;
+  /* Vertical center */
+  min-height: 300px;
+  /* Gives it space to be centered in */
+}
+
+table {
+  margin: 0 auto;
+  /* Centers the table block */
+  border-spacing: 0;
+  width: 90%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}

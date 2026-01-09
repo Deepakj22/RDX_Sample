@@ -60,7 +60,7 @@ const RegisterEmployee: React.FC<RegisterEmployeeProps> = ({ onFinalSubmit }) =>
   }
 }
   return (
-   <EmployeeForm 
+    <EmployeeForm 
    employee={employee} 
    onSubmit={handleSubmit} 
    onChange={handleChange} 
